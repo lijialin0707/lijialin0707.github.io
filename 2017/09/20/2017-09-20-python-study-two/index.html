@@ -69,18 +69,20 @@
 
 
 
-<meta name="description" content="Python基础的函数使用方法">
+<meta name="description" content="Python列表和元组的使用方法">
 <meta name="keywords" content="study,Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习笔记 基础（一）">
-<meta property="og:url" content="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-one/index.html">
+<meta property="og:title" content="Python学习笔记 基础（二）">
+<meta property="og:url" content="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-two/index.html">
 <meta property="og:site_name" content="李佳霖的博客">
-<meta property="og:description" content="Python基础的函数使用方法">
+<meta property="og:description" content="Python列表和元组的使用方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-20T09:27:04.000Z">
+<meta property="og:image" content="http://lijialin.me/images/src/python-study-two-solution.png">
+<meta property="og:updated_time" content="2017-09-20T09:31:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习笔记 基础（一）">
-<meta name="twitter:description" content="Python基础的函数使用方法">
+<meta name="twitter:title" content="Python学习笔记 基础（二）">
+<meta name="twitter:description" content="Python列表和元组的使用方法">
+<meta name="twitter:image" content="http://lijialin.me/images/src/python-study-two-solution.png">
 
 
 
@@ -110,13 +112,13 @@
 
 
 
-  <link rel="canonical" href="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-one/"/>
+  <link rel="canonical" href="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-two/"/>
 
 
 
 
 
-  <title>Python学习笔记 基础（一） | 李佳霖的博客</title>
+  <title>Python学习笔记 基础（二） | 李佳霖的博客</title>
   
 
 
@@ -301,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-one/">
+    <link itemprop="mainEntityOfPage" href="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-two/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李佳霖">
@@ -318,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python学习笔记 基础（一）</h1>
+          <h1 class="post-title" itemprop="name headline">Python学习笔记 基础（二）</h1>
         
 
         <div class="post-meta">
@@ -330,7 +332,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T17:25:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T17:30:18+08:00">
                 2017-09-20
               </time>
             
@@ -390,103 +392,135 @@
       
 
       
-        <p>Python基础的函数使用方法</p>
+        <p>Python列表和元组的使用方法</p>
 <a id="more"></a>
-<h2 id="Python学习笔记-基础（一）"><a href="#Python学习笔记-基础（一）" class="headerlink" title="Python学习笔记 基础（一）"></a>Python学习笔记 基础（一）</h2><p><strong>1.帮助</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">help()</div></pre></td></tr></table></figure>
+<h2 id="Python学习笔记-基础（二）"><a href="#Python学习笔记-基础（二）" class="headerlink" title="Python学习笔记 基础（二）"></a>Python学习笔记 基础（二）</h2><p><strong>1.索引</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">greeting = <span class="string">'hello'</span></div><div class="line"><span class="keyword">print</span> greeting[<span class="number">-1</span>]</div><div class="line"><span class="keyword">print</span> <span class="string">'hello'</span>[<span class="number">-1</span>]</div><div class="line">forth = raw_input(<span class="string">"Number:"</span>)[<span class="number">3</span>]</div><div class="line"><span class="keyword">print</span> forth</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>Welcome to Python 2.7!  This is the online help utility.</p>
-<p>If this is your first time using Python, you should definitely check out<br>the tutorial on the Internet at <a href="http://docs.python.org/2.7/tutorial/" target="_blank" rel="external">http://docs.python.org/2.7/tutorial/</a>.</p>
-<p>Enter the name of any module, keyword, or topic to get help on writing<br>Python programs and using Python modules.  To quit this help utility and<br>return to the interpreter, just type “quit”.</p>
-<p>To get a list of available modules, keywords, or topics, type “modules”,<br>“keywords”, or “topics”.  Each module also comes with a one-line summary<br>of what it does; to list the modules whose summaries contain a given word<br>such as “spam”, type “modules spam”.</p>
-<p>help&gt; </p>
+<p>o</p>
+<p>e</p>
+<p>Number:9999</p>
+<p>9</p>
 </blockquote>
-<p><strong>2.input函数</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">x = input(<span class="string">"x=:"</span>)</div><div class="line">y = input(<span class="string">"y=:"</span>)</div><div class="line"><span class="keyword">print</span> x*y</div></pre></td></tr></table></figure>
+<p><strong>2.分片(第一个数字包含在分片内，第二个数字不包含)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">tag = <span class="string">'&lt;a href="http://www.python.org"&gt;Python web site&lt;/a&gt;'</span></div><div class="line"><span class="keyword">print</span> tag[<span class="number">9</span>:<span class="number">30</span>]</div><div class="line"><span class="keyword">print</span> tag[<span class="number">32</span>:<span class="number">-4</span>]</div><div class="line"><span class="comment">#如果分片包含最后一个元素，只需置空最后一个索引(同样适用于开始的元素)</span></div><div class="line">number = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</div><div class="line"><span class="keyword">print</span> number[<span class="number">-4</span>:]</div><div class="line"><span class="keyword">print</span> number[:<span class="number">3</span>]</div><div class="line"><span class="keyword">print</span> number[:]</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>x=:7</p>
-<p>y=:8</p>
-<p>56</p>
+<p><a href="http://www.python.org" target="_blank" rel="external">http://www.python.org</a></p>
+<p>Python web site</p>
+<p>[7, 8, 9, 10]</p>
+<p>[1, 2, 3]</p>
+<p>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p>
 </blockquote>
-<p><strong>3.使用time</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">print</span> time.ctime()</div></pre></td></tr></table></figure>
+<p><strong>3.步长(负数时从右至左)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">number = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</div><div class="line"><span class="keyword">print</span> number[::<span class="number">2</span>]</div><div class="line"><span class="keyword">print</span> number[::<span class="number">-2</span>]</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>Wed Sep 20 10:52:33 2017</p>
+<p>[1, 3, 5, 7, 9]</p>
+<p>[10, 8, 6, 4, 2]</p>
 </blockquote>
-<p><strong>4.使用绝对值</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> abs(pow(<span class="number">-2</span>,<span class="number">3</span>))</div></pre></td></tr></table></figure>
+<p><strong>4.序列相加(必须是同类型),乘法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'hello,'</span> + <span class="string">'world!'</span></div><div class="line"><span class="keyword">print</span> <span class="string">'python'</span>*<span class="number">5</span></div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>8</p>
+<p>hello,world!</p>
+<p>pythonpythonpythonpythonpython</p>
 </blockquote>
-<p><strong>5.使用乘方，z代表%</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> pow(<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="keyword">print</span> pow(<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>)</div></pre></td></tr></table></figure>
+<p><strong>5.内建值None</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sequence = [<span class="keyword">None</span>]*<span class="number">10</span></div><div class="line"><span class="keyword">print</span> sequence</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>8</p>
+<p>[None, None, None, None, None, None, None, None, None, None]</p>
+</blockquote>
+<p><strong>6.序列（字符串）乘法示例</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">sentence = raw_input(<span class="string">"Sentence is :"</span>)</div><div class="line">number = <span class="number">6</span>*<span class="number">3</span></div><div class="line">margin = number/<span class="number">3</span></div><div class="line">screen_width = <span class="number">80</span></div><div class="line">text_width = len(sentence)</div><div class="line">box_width = text_width + number</div><div class="line">left_margin = (screen_width - box_width) // <span class="number">2</span></div><div class="line"><span class="keyword">print</span></div><div class="line"><span class="keyword">print</span> <span class="string">' '</span> * left_margin + <span class="string">'+'</span> + <span class="string">'-'</span> * (box_width-margin) + <span class="string">'+'</span></div><div class="line"><span class="keyword">print</span> <span class="string">' '</span> * (left_margin+margin) + <span class="string">'|'</span> + <span class="string">' '</span> * text_width + <span class="string">'|'</span></div><div class="line"><span class="keyword">print</span> <span class="string">' '</span> * (left_margin+margin) + <span class="string">'|'</span> + sentence + <span class="string">'|'</span></div><div class="line"><span class="keyword">print</span> <span class="string">' '</span> * (left_margin+margin) + <span class="string">'|'</span> + <span class="string">' '</span> * text_width + <span class="string">'|'</span></div><div class="line"><span class="keyword">print</span> <span class="string">' '</span> * left_margin + <span class="string">'+'</span> + <span class="string">'-'</span> * (box_width-margin) + <span class="string">'+'</span></div><div class="line"><span class="keyword">print</span></div></pre></td></tr></table></figure>
+<p>运行结果：<br><img src="http://lijialin.me/images/src/python-study-two-solution.png" alt="运行结果" title="运行结果"></p>
+<p><strong>7.in运算符(返回布尔类型)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">permission = <span class="string">"Canada"</span></div><div class="line"><span class="keyword">print</span> <span class="string">'c'</span> <span class="keyword">in</span> permission</div><div class="line">users = [<span class="string">'ljl'</span>, <span class="string">'wy'</span>, <span class="string">'gh'</span>]</div><div class="line">result = raw_input(<span class="string">"Enter your username:\n"</span>) <span class="keyword">in</span> users</div><div class="line"><span class="keyword">if</span> result: <span class="keyword">print</span> <span class="string">'Yes'</span></div><div class="line"><span class="keyword">else</span>: <span class="keyword">print</span> <span class="string">'No'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>False</p>
+<p>Enter your username:</p>
+<p>ljl</p>
+<p>Yes</p>
+</blockquote>
+<p><strong>8.简易数据库</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">database = [</div><div class="line">[<span class="string">'ljl'</span>, <span class="string">'123456'</span>],</div><div class="line">[<span class="string">'wy'</span>, <span class="string">'123456'</span>],</div><div class="line">[<span class="string">'gh'</span>, <span class="string">'123456'</span>],</div><div class="line">]</div><div class="line">username = raw_input(<span class="string">'User name: '</span>)</div><div class="line">pin = raw_input(<span class="string">'PIN code: '</span>)</div><div class="line"><span class="keyword">if</span> [username, pin] <span class="keyword">in</span> database: <span class="keyword">print</span> <span class="string">'Access granted!'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>User name: ljl</p>
+<p>PIN code: 123456</p>
+<p>Access granted!</p>
+</blockquote>
+<p><strong>9.min,max,len函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">numbers = [<span class="number">12</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">18</span>, <span class="number">23</span>, <span class="number">3</span>]</div><div class="line"><span class="keyword">print</span> len(numbers)</div><div class="line"><span class="keyword">print</span> max(numbers)</div><div class="line"><span class="keyword">print</span> min(numbers)</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>6</p>
+<p>23</p>
 <p>3</p>
 </blockquote>
-<p><strong>6.round(四舍五入),floor(下舍),ceil(上入)的区别</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> math</div><div class="line"><span class="keyword">print</span> round(<span class="number">3.4</span>)</div><div class="line"><span class="keyword">print</span> math.floor(<span class="number">3.9</span>)</div><div class="line"><span class="keyword">print</span> math.ceil(<span class="number">3.9</span>)</div></pre></td></tr></table></figure>
-<p>运行结果:</p>
-<blockquote>
-<p>3.0</p>
-<p>3.0</p>
-<p>4.0</p>
-</blockquote>
-<p><strong>7.使用开方</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line"><span class="keyword">print</span> sqrt(<span class="number">16</span>)</div></pre></td></tr></table></figure>
+<p><strong>10.list的一些函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">name = list(<span class="string">'Perl'</span>)</div><div class="line"><span class="keyword">print</span> name</div><div class="line">name[<span class="number">1</span>:] = <span class="string">'ython'</span></div><div class="line"><span class="keyword">print</span> name</div><div class="line">name[<span class="number">1</span>:<span class="number">1</span>] = <span class="string">'erl,p'</span></div><div class="line"><span class="keyword">print</span> name</div><div class="line">name[<span class="number">1</span>:<span class="number">6</span>] = <span class="string">''</span></div><div class="line"><span class="keyword">print</span> name</div><div class="line">name[<span class="number">-1</span>:] = <span class="string">'perl'</span></div><div class="line"><span class="keyword">print</span> name</div><div class="line">name.append(<span class="string">'Python'</span>)</div><div class="line"><span class="keyword">print</span> name.count(<span class="string">'s'</span>)</div><div class="line">name.extend(list(<span class="string">'Python'</span>))</div><div class="line">name = name + list(<span class="string">'Python'</span>)</div><div class="line">name[len(name):] = list(<span class="string">"Python"</span>)</div><div class="line"><span class="keyword">print</span> name</div><div class="line"><span class="keyword">print</span> name.index(<span class="string">'e'</span>)</div><div class="line">name.insert(<span class="number">3</span>,<span class="string">'len'</span>)</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>4.0</p>
+<p>[‘P’, ‘e’, ‘r’, ‘l’]</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
+<p>[‘P’, ‘e’, ‘r’, ‘l’, ‘,’, ‘p’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘p’, ‘e’, ‘r’, ‘l’]</p>
+<p>0</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘p’, ‘e’, ‘r’, ‘l’, ‘Python’, ‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’, ‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’, ‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
+<p>6</p>
 </blockquote>
-<p><strong>8.使用复数</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> cmath</div><div class="line"><span class="keyword">print</span> cmath.sqrt(<span class="number">-1</span>)</div><div class="line"><span class="keyword">print</span> (<span class="number">1</span>+<span class="number">3j</span>)*(<span class="number">9</span>+<span class="number">4j</span>)</div></pre></td></tr></table></figure>
+<p><strong>11.pop()会移除列表中的一个元素，默认是最后一个，并且返回该元素的值</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">name = list(<span class="string">'Python'</span>)</div><div class="line"><span class="keyword">print</span> name.pop(<span class="number">3</span>)</div><div class="line"><span class="keyword">print</span> name.pop()</div><div class="line"><span class="keyword">print</span> name</div><div class="line"><span class="comment">#pop是唯一一个既可以修改列表又返回元素值的列表方法</span></div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>1j</p>
-<p>(-3+31j)</p>
+<p>h</p>
+<p>n</p>
+<p>[‘P’, ‘y’, ‘t’, ‘o’]</p>
 </blockquote>
-<p><strong>9.input 和 raw_input的区别</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">name = raw_input(<span class="string">"what's your name?\n"</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"Hello "</span>+name +<span class="string">' !'</span></div><div class="line">name = input(<span class="string">"what's your name?\n"</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"Hello "</span>+name+<span class="string">' !'</span> <span class="comment">#input输入字符串需要加引号</span></div></pre></td></tr></table></figure>
+<p><strong>12.栈可以用append()和pop()实现</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">name = list(<span class="string">'Python'</span>)</div><div class="line">name.append(<span class="string">'b'</span>)</div><div class="line"><span class="keyword">print</span> name</div><div class="line"><span class="keyword">print</span> name.pop()</div><div class="line"><span class="keyword">print</span> name</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>what’s your name?</p>
-<p>lijialin</p>
-<p>Hello lijialin !</p>
-<p>what’s your name?</p>
-<p>“lijialin”</p>
-<p>Hello lijialin !</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’, ‘b’]</p>
+<p>b</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
 </blockquote>
-<p><strong>10.repr(返回值的字符串表示) 和 str(将值转换为字符串) 的区别</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">temp = <span class="number">42L</span></div><div class="line"><span class="keyword">print</span> <span class="string">"The temperature is "</span>+repr(temp)</div><div class="line"><span class="keyword">print</span> <span class="string">"The temperature is "</span>+str(temp)</div></pre></td></tr></table></figure>
+<p><strong>13.list的一些函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">name = list(<span class="string">'Python'</span>)</div><div class="line">name.remove(<span class="string">'o'</span>)</div><div class="line"><span class="keyword">print</span> name</div><div class="line">name.reverse();</div><div class="line"><span class="keyword">print</span> name</div><div class="line">name.sort()</div><div class="line"><span class="keyword">print</span> name</div><div class="line">eman = name[:]</div><div class="line">eman.sort()</div><div class="line"><span class="keyword">print</span> eman</div><div class="line">eman = sorted(name)</div><div class="line"><span class="keyword">print</span> eman</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>The temperature is 42L</p>
-<p>The temperature is 42</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘n’]</p>
+<p>[‘n’, ‘h’, ‘t’, ‘y’, ‘P’]</p>
+<p>[‘P’, ‘h’, ‘n’, ‘t’, ‘y’]</p>
+<p>[‘P’, ‘h’, ‘n’, ‘t’, ‘y’]</p>
+<p>[‘P’, ‘h’, ‘n’, ‘t’, ‘y’]</p>
 </blockquote>
-<p><strong>11.输出多行字符串</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'''this is a very long string</span></div><div class="line"><span class="string">i\'m line 2</span></div><div class="line"><span class="string">i\'m line 3</span></div><div class="line"><span class="string">end'''</span></div><div class="line"><span class="keyword">print</span> <span class="string">'this is a very long string \ni\'m line 2 \ni\'m line 3 \nend'</span></div><div class="line"><span class="keyword">print</span> <span class="string">"this is a \</span></div><div class="line"><span class="string">long string"</span></div></pre></td></tr></table></figure>
+<p><strong>14.cmp()函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> cmp(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">print</span> cmp(<span class="number">2</span>, <span class="number">1</span>)</div><div class="line"><span class="keyword">print</span> cmp(<span class="number">1</span>, <span class="number">1</span>)</div><div class="line">number = [<span class="number">4</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">3</span>]</div><div class="line">number.sort(cmp)</div><div class="line"><span class="keyword">print</span> number</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>this is a very long string</p>
-<p>i’m line 2</p>
-<p>i’m line 3</p>
-<p>end</p>
-<p>this is a very long string </p>
-<p>i’m line 2 </p>
-<p>i’m line 3 </p>
-<p>end</p>
-<p>this is a long string</p>
+<p>-1</p>
+<p>1</p>
+<p>0</p>
+<p>[2, 3, 4, 8, 9]</p>
 </blockquote>
-<p><strong>12.原始字符串</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">r'c:\nowhere'</span> <span class="comment">#原始字符串对于反斜线不会特殊对待</span></div></pre></td></tr></table></figure>
+<p><strong>15.高级排序(key=关键字参数，reverse=是否反序)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">x = [<span class="string">'abc'</span>, <span class="string">'abcf'</span>, <span class="string">'anc'</span>, <span class="string">'s'</span>]</div><div class="line">x.sort(key=len)</div><div class="line"><span class="keyword">print</span> x</div><div class="line">x = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">8</span>]</div><div class="line">x.sort(reverse=<span class="keyword">True</span>)</div><div class="line"><span class="keyword">print</span> x</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>c:\nowhere</p>
+<p>[‘s’, ‘abc’, ‘anc’, ‘abcf’]</p>
+<p>[8, 3, 1, 0]</p>
+</blockquote>
+<p><strong>16.元组</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> <span class="comment">#元组不能修改</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>1 2 3</p>
 </blockquote>
 
       
@@ -520,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/20/2017-09-19-study-sdn-one/" rel="next" title="SDN学习笔记(一)">
-                <i class="fa fa-chevron-left"></i> SDN学习笔记(一)
+              <a href="/2017/09/20/2017-09-20-python-study-one/" rel="next" title="Python学习笔记 基础（一）">
+                <i class="fa fa-chevron-left"></i> Python学习笔记 基础（一）
               </a>
             
           </div>
@@ -529,10 +563,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/20/2017-09-20-python-study-two/" rel="prev" title="Python学习笔记 基础（二）">
-                Python学习笔记 基础（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -683,7 +713,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python学习笔记-基础（一）"><span class="nav-number">1.</span> <span class="nav-text">Python学习笔记 基础（一）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python学习笔记-基础（二）"><span class="nav-number">1.</span> <span class="nav-text">Python学习笔记 基础（二）</span></a></li></ol></div>
             
 
           </div>
