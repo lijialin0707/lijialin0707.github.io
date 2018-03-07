@@ -105,18 +105,20 @@
 
 
 
-<meta name="description" content="Python基础的函数使用方法…">
+<meta name="description" content="Python基础–字符串…">
 <meta name="keywords" content="Python,study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习笔记 基础（一）">
-<meta property="og:url" content="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-one/index.html">
+<meta property="og:title" content="Python学习笔记 基础（三）">
+<meta property="og:url" content="https://lijialin0707.github.io/index.html/2018/03/07/2018-03-07-python-study-three/index.html">
 <meta property="og:site_name" content="李佳霖的博客">
-<meta property="og:description" content="Python基础的函数使用方法…">
+<meta property="og:description" content="Python基础–字符串…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-21T00:37:29.000Z">
+<meta property="og:image" content="http://lijialin0707.github.io/images/src/python-study-three-solution.png">
+<meta property="og:updated_time" content="2018-03-07T01:46:20.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习笔记 基础（一）">
-<meta name="twitter:description" content="Python基础的函数使用方法…">
+<meta name="twitter:title" content="Python学习笔记 基础（三）">
+<meta name="twitter:description" content="Python基础–字符串…">
+<meta name="twitter:image" content="http://lijialin0707.github.io/images/src/python-study-three-solution.png">
 
 
 
@@ -146,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-one/"/>
+  <link rel="canonical" href="https://lijialin0707.github.io/index.html/2018/03/07/2018-03-07-python-study-three/"/>
 
 
 
 
 
-  <title>Python学习笔记 基础（一） | 李佳霖的博客</title>
+  <title>Python学习笔记 基础（三） | 李佳霖的博客</title>
   
 
 
@@ -304,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lijialin0707.github.io/index.html/2017/09/20/2017-09-20-python-study-one/">
+    <link itemprop="mainEntityOfPage" href="https://lijialin0707.github.io/index.html/2018/03/07/2018-03-07-python-study-three/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李佳霖">
@@ -321,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python学习笔记 基础（一）</h1>
+          <h1 class="post-title" itemprop="name headline">Python学习笔记 基础（三）</h1>
         
 
         <div class="post-meta">
@@ -333,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T17:25:58+08:00">
-                2017-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-07T09:01:30+08:00">
+                2018-03-07
               </time>
             
 
@@ -393,91 +395,52 @@
       
 
       
-        <p>Python基础的函数使用方法…</p>
+        <p>Python基础–字符串…</p>
 <a id="more"></a>
-<h2 id="Python学习笔记-基础（一）"><a href="#Python学习笔记-基础（一）" class="headerlink" title="Python学习笔记 基础（一）"></a>Python学习笔记 基础（一）</h2><h3 id="1-帮助"><a href="#1-帮助" class="headerlink" title="1.帮助"></a>1.帮助</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">help()</div></pre></td></tr></table></figure>
+<h2 id="Python学习笔记-基础（三）"><a href="#Python学习笔记-基础（三）" class="headerlink" title="Python学习笔记 基础（三）"></a>Python学习笔记 基础（三）</h2><h3 id="1-字符串格式化操作符“-”"><a href="#1-字符串格式化操作符“-”" class="headerlink" title="1.字符串格式化操作符“%”"></a>1.字符串格式化操作符“%”</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">format = <span class="string">"hello,%s.%s enough for ya"</span></div><div class="line">values = (<span class="string">'world'</span>, <span class="string">'hot'</span>)</div><div class="line"><span class="keyword">print</span> format % values</div><div class="line">format = <span class="string">"Pi with ten decimals:%.10f"</span></div><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi</div><div class="line"><span class="keyword">print</span> format % pi</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>Welcome to Python 2.7!  This is the online help utility.</p>
-<p>If this is your first time using Python, you should definitely check out<br>the tutorial on the Internet at <a href="http://docs.python.org/2.7/tutorial/" target="_blank" rel="external">http://docs.python.org/2.7/tutorial/</a>.</p>
-<p>Enter the name of any module, keyword, or topic to get help on writing<br>Python programs and using Python modules.  To quit this help utility and<br>return to the interpreter, just type “quit”.</p>
-<p>To get a list of available modules, keywords, or topics, type “modules”,<br>“keywords”, or “topics”.  Each module also comes with a one-line summary<br>of what it does; to list the modules whose summaries contain a given word<br>such as “spam”, type “modules spam”.</p>
-<p>help&gt; </p>
+<p>hello,world.hot enough for ya</p>
+<p>Pi with ten decimals:3.1415926536</p>
 </blockquote>
-<h3 id="2-input函数"><a href="#2-input函数" class="headerlink" title="2.input函数"></a>2.input函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">x = input(<span class="string">"x=:"</span>)</div><div class="line">y = input(<span class="string">"y=:"</span>)</div><div class="line"><span class="keyword">print</span> x*y</div></pre></td></tr></table></figure>
+<h3 id="2-模板字符串"><a href="#2-模板字符串" class="headerlink" title="2.模板字符串"></a>2.模板字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> string <span class="keyword">import</span> Template</div><div class="line">s = Template(<span class="string">'$x,glorious $x!'</span>)</div><div class="line"><span class="keyword">print</span> s.substitute(x=<span class="string">'slurm'</span>)</div><div class="line">s = Template(<span class="string">"It's $&#123;x&#125;tastic!"</span>)</div><div class="line"><span class="keyword">print</span> s.substitute(x=<span class="string">'slurm'</span>)</div><div class="line">s = Template(<span class="string">"Make $$ selling $x"</span>)</div><div class="line"><span class="keyword">print</span> s.substitute(x=<span class="string">'slurm'</span>)</div><div class="line">s = Template(<span class="string">'A $thing must never $action'</span>)</div><div class="line">d = &#123;&#125;</div><div class="line">d[<span class="string">'thing'</span>] = <span class="string">'gentleman'</span></div><div class="line">d[<span class="string">'action'</span>] = <span class="string">'show his socks'</span></div><div class="line"><span class="keyword">print</span> s.substitute(d)</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>x=:7</p>
-<p>y=:8</p>
-<p>56</p>
+<p>slurm,glorious slurm!</p>
+<p>It’s slurmtastic!</p>
+<p>Make $ selling slurm</p>
+<p>A gentleman must never show his socks</p>
 </blockquote>
-<h3 id="3-使用time"><a href="#3-使用time" class="headerlink" title="3.使用time"></a>3.使用time</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">print</span> time.ctime()</div></pre></td></tr></table></figure>
+<h3 id="3-字符串格式化"><a href="#3-字符串格式化" class="headerlink" title="3.字符串格式化"></a>3.字符串格式化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'%s plus %s equals %s'</span> % (<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> pi</div><div class="line"><span class="keyword">print</span> <span class="string">'Price of eggs:$%d'</span> % <span class="number">42</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Price of eggs:$%x'</span> % <span class="number">42</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Pi: %f...'</span> % pi</div><div class="line"><span class="keyword">print</span> <span class="string">'Very inexact estimate of pi: %i'</span> % pi</div><div class="line"><span class="keyword">print</span> <span class="string">'Using str :%s'</span> % <span class="number">42L</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Using repr :%r'</span> % <span class="number">42L</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Pi:%10f'</span> % pi  <span class="comment">#字段宽10</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Pi:%10.2f'</span> % pi  <span class="comment">#字段宽10，精度2</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Pi:%.2f'</span> % pi  <span class="comment">#精度2</span></div><div class="line"><span class="keyword">print</span> <span class="string">'%.5s'</span> % <span class="string">'Guido van Rossum'</span> <span class="comment">#精度5</span></div><div class="line"><span class="keyword">print</span> <span class="string">'%.*s'</span> % (<span class="number">5</span>, <span class="string">'Guido van Rossum'</span>) <span class="comment">#可以使用*作为字段宽度或者精度</span></div><div class="line"><span class="keyword">print</span> <span class="string">'%+10.2f'</span> % pi <span class="comment">#在字段宽度和精度之前还可以放一个标志，可以是零、加号、减号或空格</span></div><div class="line"><span class="keyword">print</span> <span class="string">'%-10.2f'</span> % pi <span class="comment">#左对齐</span></div><div class="line"><span class="keyword">print</span> (<span class="string">'% 5d'</span> % <span class="number">10</span>) + <span class="string">'\n'</span> + (<span class="string">'% 5d'</span> % <span class="number">-10</span>) <span class="comment">#" "对齐正负数时很有用</span></div><div class="line"><span class="keyword">print</span> (<span class="string">'%+5d'</span> % <span class="number">10</span>) + <span class="string">'\n'</span> + (<span class="string">'%+5d'</span> % <span class="number">-10</span>) <span class="comment">#"+"不管是正数还是负数都显示出符号</span></div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>Wed Sep 20 10:52:33 2017</p>
+<p>1 plus 1 equals 2</p>
+<p>Price of eggs:$42</p>
+<p>Price of eggs:$2a</p>
+<p>Pi: 3.141593…</p>
+<p>Very inexact estimate of pi: 3</p>
+<p>Using str :42</p>
+<p>Using repr :42L</p>
+<p>Pi:  3.141593</p>
+<p>Pi:      3.14</p>
+<p>Pi:3.14</p>
+<p>Guido</p>
+<p>Guido</p>
+<p><strong>_</strong>+3.14(下划线表示空格)</p>
+<p>3.14 </p>
+<p>___10</p>
+<p>__-10</p>
+<p>__+10</p>
+<p>__-10</p>
 </blockquote>
-<h3 id="4-使用绝对值"><a href="#4-使用绝对值" class="headerlink" title="4.使用绝对值"></a>4.使用绝对值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> abs(pow(<span class="number">-2</span>,<span class="number">3</span>))</div></pre></td></tr></table></figure>
+<h3 id="4-一段代码"><a href="#4-一段代码" class="headerlink" title="4.一段代码"></a>4.一段代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">width = input(<span class="string">'please enter width:'</span>)</div><div class="line">price_width = <span class="number">10</span></div><div class="line">item_width = width - price_width</div><div class="line">header_format = <span class="string">'%-*s%*s'</span></div><div class="line">format = <span class="string">'%-*s%*.2f'</span></div><div class="line"></div><div class="line"><span class="keyword">print</span> <span class="string">'='</span>*width</div><div class="line"><span class="keyword">print</span> header_format % (item_width, <span class="string">'Item'</span>, price_width, <span class="string">'Price'</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">'-'</span>*width</div><div class="line"><span class="keyword">print</span> format % (item_width, <span class="string">'Apples'</span>, price_width, <span class="number">0.4</span>)</div><div class="line"><span class="keyword">print</span> format % (item_width, <span class="string">'Pears'</span>, price_width, <span class="number">0.5</span>)</div><div class="line"><span class="keyword">print</span> format % (item_width, <span class="string">'Cantaloupes'</span>, price_width, <span class="number">1.92</span>)</div><div class="line"><span class="keyword">print</span> format % (item_width, <span class="string">'Dried Apricots(16 oz.)'</span>, price_width, <span class="number">8</span>)</div><div class="line"><span class="keyword">print</span> format % (item_width, <span class="string">'Prunes(4 lbs.)'</span>, price_width, <span class="number">12</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">'='</span>*width</div></pre></td></tr></table></figure>
+<p>运行结果：<br><img src="http://lijialin0707.github.io/images/src/python-study-three-solution.png" alt="运行结果" title="运行结果"></p>
+<h3 id="5-字符串方法"><a href="#5-字符串方法" class="headerlink" title="5.字符串方法"></a>5.字符串方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title = <span class="string">"Money Python's Flying Circus"</span></div><div class="line"><span class="keyword">print</span> title.find(<span class="string">'Money'</span>)</div><div class="line"><span class="keyword">print</span> title.find(<span class="string">'Flying'</span>)</div><div class="line"><span class="keyword">print</span> title.find(<span class="string">'Zirquss'</span>)</div></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <blockquote>
-<p>8</p>
-</blockquote>
-<h3 id="5-使用乘方，z代表"><a href="#5-使用乘方，z代表" class="headerlink" title="5.使用乘方，z代表%"></a>5.使用乘方，z代表%</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> pow(<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="keyword">print</span> pow(<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>)</div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>8</p>
-<p>3</p>
-</blockquote>
-<h3 id="6-round-四舍五入-floor-下舍-ceil-上入-的区别"><a href="#6-round-四舍五入-floor-下舍-ceil-上入-的区别" class="headerlink" title="6.round(四舍五入),floor(下舍),ceil(上入)的区别"></a>6.round(四舍五入),floor(下舍),ceil(上入)的区别</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> math</div><div class="line"><span class="keyword">print</span> round(<span class="number">3.4</span>)</div><div class="line"><span class="keyword">print</span> math.floor(<span class="number">3.9</span>)</div><div class="line"><span class="keyword">print</span> math.ceil(<span class="number">3.9</span>)</div></pre></td></tr></table></figure>
-<p>运行结果:</p>
-<blockquote>
-<p>3.0</p>
-<p>3.0</p>
-<p>4.0</p>
-</blockquote>
-<h3 id="7-使用开方"><a href="#7-使用开方" class="headerlink" title="7.使用开方"></a>7.使用开方</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line"><span class="keyword">print</span> sqrt(<span class="number">16</span>)</div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>4.0</p>
-</blockquote>
-<h3 id="8-使用复数"><a href="#8-使用复数" class="headerlink" title="8.使用复数"></a>8.使用复数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> cmath</div><div class="line"><span class="keyword">print</span> cmath.sqrt(<span class="number">-1</span>)</div><div class="line"><span class="keyword">print</span> (<span class="number">1</span>+<span class="number">3j</span>)*(<span class="number">9</span>+<span class="number">4j</span>)</div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>1j</p>
-<p>(-3+31j)</p>
-</blockquote>
-<h3 id="9-input-和-raw-input的区别"><a href="#9-input-和-raw-input的区别" class="headerlink" title="9.input 和 raw_input的区别"></a>9.input 和 raw_input的区别</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">name = raw_input(<span class="string">"what's your name?\n"</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"Hello "</span>+name +<span class="string">' !'</span></div><div class="line">name = input(<span class="string">"what's your name?\n"</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">"Hello "</span>+name+<span class="string">' !'</span> <span class="comment">#input输入字符串需要加引号</span></div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>what’s your name?</p>
-<p>lijialin</p>
-<p>Hello lijialin !</p>
-<p>what’s your name?</p>
-<p>“lijialin”</p>
-<p>Hello lijialin !</p>
-</blockquote>
-<h3 id="10-repr-返回值的字符串表示-和-str-将值转换为字符串-的区别"><a href="#10-repr-返回值的字符串表示-和-str-将值转换为字符串-的区别" class="headerlink" title="10.repr(返回值的字符串表示) 和 str(将值转换为字符串) 的区别"></a>10.repr(返回值的字符串表示) 和 str(将值转换为字符串) 的区别</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">temp = <span class="number">42L</span></div><div class="line"><span class="keyword">print</span> <span class="string">"The temperature is "</span>+repr(temp)</div><div class="line"><span class="keyword">print</span> <span class="string">"The temperature is "</span>+str(temp)</div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>The temperature is 42L</p>
-<p>The temperature is 42</p>
-</blockquote>
-<h3 id="11-输出多行字符串"><a href="#11-输出多行字符串" class="headerlink" title="11.输出多行字符串"></a>11.输出多行字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'''this is a very long string</span></div><div class="line"><span class="string">i\'m line 2</span></div><div class="line"><span class="string">i\'m line 3</span></div><div class="line"><span class="string">end'''</span></div><div class="line"><span class="keyword">print</span> <span class="string">'this is a very long string \ni\'m line 2 \ni\'m line 3 \nend'</span></div><div class="line"><span class="keyword">print</span> <span class="string">"this is a \</span></div><div class="line"><span class="string">long string"</span></div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>this is a very long string</p>
-<p>i’m line 2</p>
-<p>i’m line 3</p>
-<p>end</p>
-<p>this is a very long string </p>
-<p>i’m line 2 </p>
-<p>i’m line 3 </p>
-<p>end</p>
-<p>this is a long string</p>
-</blockquote>
-<h3 id="12-原始字符串"><a href="#12-原始字符串" class="headerlink" title="12.原始字符串"></a>12.原始字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">r'c:\nowhere'</span> <span class="comment">#原始字符串对于反斜线不会特殊对待</span></div></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<blockquote>
-<p>c:\nowhere</p>
+<p>0</p>
+<p>15</p>
+<p>-1</p>
 </blockquote>
 
       
@@ -499,7 +462,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="" title="Python学习笔记 基础（一）">Python学习笔记 基础（一）</a>
+    <a href="" title="Python学习笔记 基础（三）">Python学习笔记 基础（三）</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -535,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/20/2017-09-19-study-sdn-one/" rel="next" title="SDN学习笔记(一)">
-                <i class="fa fa-chevron-left"></i> SDN学习笔记(一)
+              <a href="/2017/09/21/2017-09-21-my-trip-one/" rel="next" title="武汉游记">
+                <i class="fa fa-chevron-left"></i> 武汉游记
               </a>
             
           </div>
@@ -544,10 +507,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/20/2017-09-20-python-study-two/" rel="prev" title="Python学习笔记 基础（二）">
-                Python学习笔记 基础（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -709,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python学习笔记-基础（一）"><span class="nav-number">1.</span> <span class="nav-text">Python学习笔记 基础（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-帮助"><span class="nav-number">1.1.</span> <span class="nav-text">1.帮助</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-input函数"><span class="nav-number">1.2.</span> <span class="nav-text">2.input函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用time"><span class="nav-number">1.3.</span> <span class="nav-text">3.使用time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-使用绝对值"><span class="nav-number">1.4.</span> <span class="nav-text">4.使用绝对值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-使用乘方，z代表"><span class="nav-number">1.5.</span> <span class="nav-text">5.使用乘方，z代表%</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-round-四舍五入-floor-下舍-ceil-上入-的区别"><span class="nav-number">1.6.</span> <span class="nav-text">6.round(四舍五入),floor(下舍),ceil(上入)的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-使用开方"><span class="nav-number">1.7.</span> <span class="nav-text">7.使用开方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-使用复数"><span class="nav-number">1.8.</span> <span class="nav-text">8.使用复数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-input-和-raw-input的区别"><span class="nav-number">1.9.</span> <span class="nav-text">9.input 和 raw_input的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-repr-返回值的字符串表示-和-str-将值转换为字符串-的区别"><span class="nav-number">1.10.</span> <span class="nav-text">10.repr(返回值的字符串表示) 和 str(将值转换为字符串) 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-输出多行字符串"><span class="nav-number">1.11.</span> <span class="nav-text">11.输出多行字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-原始字符串"><span class="nav-number">1.12.</span> <span class="nav-text">12.原始字符串</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python学习笔记-基础（三）"><span class="nav-number">1.</span> <span class="nav-text">Python学习笔记 基础（三）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-字符串格式化操作符“-”"><span class="nav-number">1.1.</span> <span class="nav-text">1.字符串格式化操作符“%”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-模板字符串"><span class="nav-number">1.2.</span> <span class="nav-text">2.模板字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-字符串格式化"><span class="nav-number">1.3.</span> <span class="nav-text">3.字符串格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-一段代码"><span class="nav-number">1.4.</span> <span class="nav-text">4.一段代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-字符串方法"><span class="nav-number">1.5.</span> <span class="nav-text">5.字符串方法</span></a></li></ol></li></ol></div>
             
 
           </div>
