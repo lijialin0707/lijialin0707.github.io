@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入封印之契约') !== ''){
+                alert('小兄弟不要逗！');
+                
+                if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)){ // IE  
+        if(history.length > 0){  
+            window.history.go( -1 );  
+        }else{  
+            window.opener=null;window.close();  
+        }  
+    }else{ //非IE浏览器  
+        if (navigator.userAgent.indexOf('Firefox') >= 0 ||  
+            navigator.userAgent.indexOf('Opera') >= 0 ||  
+            navigator.userAgent.indexOf('Safari') >= 0 ||  
+            navigator.userAgent.indexOf('Chrome') >= 0 ||  
+            navigator.userAgent.indexOf('WebKit') >= 0){  
+  
+            if(window.history.length > 1){  
+                window.history.go( -1 );  
+            }else{  
+                window.opener=null;window.close();  
+            }  
+        }else{ //未知的浏览器  
+            window.history.go( -1 );  
+        }  
+    }  
+
+            }
+        }
+    })();
+</script>
+
+<script type="text/javascript" src="http://lijialin.me/lib/high.js"></script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="study,Python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Python基础–条件、循环及其他语句…">
+<meta name="keywords" content="study,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习笔记 基础（五）">
+<meta property="og:url" content="https://lijialin0707.github.io/index.html/2018/03/07/2018-03-07-python-study-five/index.html">
+<meta property="og:site_name" content="李佳霖的博客">
+<meta property="og:description" content="Python基础–条件、循环及其他语句…">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-07T06:53:52.550Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python学习笔记 基础（五）">
+<meta name="twitter:description" content="Python基础–条件、循环及其他语句…">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lijialin0707.github.io/index.html/2018/03/07/2018-03-07-python-study-five/"/>
+
+
+
+
+
+  <title>Python学习笔记 基础（五） | 李佳霖的博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?837370a496647188375545a5fc593a88";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">李佳霖的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Lijialin's Blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+
+      
+       
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lijialin0707.github.io/index.html/2018/03/07/2018-03-07-python-study-five/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李佳霖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李佳霖的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python学习笔记 基础（五）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-07T09:51:30+08:00">
+                2018-03-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Python基础–条件、循环及其他语句…</p>
+<a id="more"></a>
+<h2 id="Python学习笔记-基础（五）"><a href="#Python学习笔记-基础（五）" class="headerlink" title="Python学习笔记 基础（五）"></a>Python学习笔记 基础（五）</h2><h3 id="1-print语句"><a href="#1-print语句" class="headerlink" title="1.print语句"></a>1.print语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">name = <span class="string">'Gumby'</span></div><div class="line">salutation = <span class="string">'Mr.'</span></div><div class="line">greeting = <span class="string">'Hello'</span></div><div class="line"><span class="keyword">print</span> greeting, salutation, name</div><div class="line"><span class="keyword">print</span> <span class="string">'Hello'</span>,</div><div class="line"><span class="keyword">print</span> <span class="string">'world!'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Hello Mr. Gumby</p>
+<p>Hello world!</p>
+</blockquote>
+<h3 id="2-import语句"><a href="#2-import语句" class="headerlink" title="2.import语句"></a>2.import语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> math <span class="keyword">as</span> foobar  <span class="comment"># 别名</span></div><div class="line"><span class="keyword">print</span> foobar.sqrt(<span class="number">4</span>)</div><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt <span class="keyword">as</span> foobar  <span class="comment"># 别名</span></div><div class="line"><span class="keyword">print</span> foobar(<span class="number">4</span>)</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>2.0</p>
+<p>2.0</p>
+</blockquote>
+<h3 id="3-赋值语句"><a href="#3-赋值语句" class="headerlink" title="3.赋值语句"></a>3.赋值语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#多个赋值操作可以同时进行</span></div><div class="line">x, y, z = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span></div><div class="line"><span class="keyword">print</span> x, y, z</div><div class="line">x, y = y, x  <span class="comment"># 交换</span></div><div class="line"><span class="keyword">print</span> x, y, z</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>1 2 3</p>
+<p>2 1 3</p>
+</blockquote>
+<h3 id="4-序列解包"><a href="#4-序列解包" class="headerlink" title="4.序列解包"></a>4.序列解包</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 序列解包（递归解包）——将多个值的序列解开，然后放到变量的序列中</span></div><div class="line">values = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span></div><div class="line"><span class="keyword">print</span> values</div><div class="line">x, y, z = values</div><div class="line"><span class="keyword">print</span> x</div><div class="line">scoundrel = &#123;<span class="string">'name'</span>: <span class="string">'Robin'</span>, <span class="string">'girlfriend'</span>: <span class="string">'Marion'</span>&#125;</div><div class="line">key, value = scoundrel.popitem()  <span class="comment"># 解包的序列中的元素数量必须和放置在赋值符号左边的变量数量完全一致</span></div><div class="line"><span class="keyword">print</span> key, value</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>(1, 2, 3)</p>
+<p>1</p>
+<p>girlfriend Marion</p>
+</blockquote>
+<h3 id="5-增量赋值"><a href="#5-增量赋值" class="headerlink" title="5.增量赋值"></a>5.增量赋值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 增量赋值(对于 * / % 等标准运算都适用)</span></div><div class="line">x = <span class="number">2</span></div><div class="line">x += <span class="number">1</span></div><div class="line">x *= <span class="number">2</span></div><div class="line"><span class="keyword">print</span> x</div><div class="line">fnord = <span class="string">'foo'</span></div><div class="line">fnord += <span class="string">'bar'</span></div><div class="line">fnord *= <span class="number">2</span></div><div class="line"><span class="keyword">print</span> fnord</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>6</p>
+<p>foobarfoobar</p>
+</blockquote>
+<h3 id="6-条件语句"><a href="#6-条件语句" class="headerlink" title="6.条件语句"></a>6.条件语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 条件和条件语句</span></div><div class="line"><span class="keyword">print</span> <span class="keyword">True</span> + <span class="keyword">False</span> + <span class="number">1</span></div><div class="line"><span class="keyword">print</span> bool(<span class="string">''</span>)</div><div class="line"><span class="keyword">print</span> bool(<span class="string">'I think,therefore i am'</span>)</div><div class="line"></div><div class="line"><span class="comment"># 条件执行和if语句，else语句，elif语句</span></div><div class="line">name = raw_input(<span class="string">"What's your name?"</span>)</div><div class="line"><span class="keyword">if</span> name.endswith(<span class="string">'Gumby'</span>):</div><div class="line">   <span class="keyword">print</span> <span class="string">'Hello, Mr.Gumby'</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'Hello, stranger'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>2</p>
+<p>False</p>
+<p>True</p>
+<p>What’s your name? Gumby</p>
+<p>Hello, Mr.Gumby</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">num = input(<span class="string">'Enter a number:'</span>)</div><div class="line"><span class="keyword">if</span> num &gt; <span class="number">0</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'The number is positive'</span></div><div class="line"><span class="keyword">elif</span> num &lt; <span class="number">0</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'The number is negative'</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'The number is zero'</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>Enter a number:5</p>
+<p>The number is positive</p>
+</blockquote>
+<h3 id="7-嵌套代码块"><a href="#7-嵌套代码块" class="headerlink" title="7.嵌套代码块"></a>7.嵌套代码块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">name = raw_input(<span class="string">"What's your name?"</span>)</div><div class="line"><span class="keyword">if</span> name.endswith(<span class="string">'Gumby'</span>):</div><div class="line">   <span class="keyword">if</span> name.startswith(<span class="string">'Mr.'</span>):</div><div class="line">       <span class="keyword">print</span> <span class="string">'Hello, Mr.Gumby'</span></div><div class="line">   <span class="keyword">elif</span> name.startswith(<span class="string">'Mrs.'</span>):</div><div class="line">       <span class="keyword">print</span> <span class="string">'Hello, Mrs.Gumby'</span></div><div class="line">   <span class="keyword">else</span>:</div><div class="line">       <span class="keyword">print</span> <span class="string">'Hello, Gumby'</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'Hello, stranger'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>What’s your name?Mr.Gumby</p>
+<p>Hello, Mr.Gumby</p>
+</blockquote>
+<h3 id="8-一些小细节"><a href="#8-一些小细节" class="headerlink" title="8.一些小细节"></a>8.一些小细节</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">x = y = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line">z = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line"><span class="keyword">print</span> x == y, x == z, x <span class="keyword">is</span> y, x <span class="keyword">is</span> z  <span class="comment"># is判定同一性而不是相等性</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>True True True False</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line">y = [<span class="number">2</span>, <span class="number">4</span>]</div><div class="line"><span class="keyword">print</span> x <span class="keyword">is</span> <span class="keyword">not</span> y</div><div class="line"><span class="keyword">del</span> x[<span class="number">2</span>]</div><div class="line">y[<span class="number">1</span>] = <span class="number">1</span></div><div class="line">y.reverse()</div><div class="line"><span class="keyword">print</span> x == y</div><div class="line"><span class="keyword">print</span> x <span class="keyword">is</span> y</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>True</p>
+<p>True</p>
+<p>False</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">name = raw_input(<span class="string">"what's your name? "</span>)</div><div class="line"><span class="keyword">if</span> <span class="string">'s'</span><span class="keyword">in</span> name:</div><div class="line">   <span class="keyword">print</span> <span class="string">'Your name contains the letter "s".'</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'Your name does not contains the letter "s".'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>what’s your name? lijialin</p>
+<p>Your name does not contains the letter “s”.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'alpha'</span> &lt; <span class="string">'beta'</span>  <span class="comment"># 按字母顺序比较</span></div><div class="line"><span class="keyword">print</span> <span class="string">'FnOrD'</span>.lower() == <span class="string">'Fnord'</span>.lower()</div><div class="line"><span class="keyword">print</span> [<span class="number">1</span>, <span class="number">2</span>] &lt; [<span class="number">2</span>, <span class="number">1</span>]</div><div class="line"><span class="keyword">print</span> [<span class="number">2</span>, [<span class="number">1</span>, <span class="number">4</span>]] &lt; [<span class="number">2</span>, [<span class="number">1</span>, <span class="number">5</span>]]</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>True</p>
+<p>True</p>
+<p>True</p>
+<p>True</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">number = input(<span class="string">'Enter a number between 1 and 10:'</span>)</div><div class="line"><span class="keyword">if</span> number &gt;= <span class="number">0</span> <span class="keyword">and</span> number &lt;= <span class="number">10</span>:  <span class="comment"># 1&lt;=number&lt;=10</span></div><div class="line">   <span class="keyword">print</span> <span class="string">'Great!'</span></div><div class="line"><span class="keyword">else</span>:</div><div class="line">   <span class="keyword">print</span> <span class="string">'Wrong!'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Enter a number between 1 and 10:5</p>
+<p>Great!</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 断言（在程序中设置检查点）</span></div><div class="line">age = <span class="number">-1</span></div><div class="line"><span class="keyword">assert</span> <span class="number">0</span> &lt; age &lt; <span class="number">100</span>, <span class="string">'The age must be realistic'</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Traceback (most recent call last):<br>  File “/Users/lijialin/PycharmProjects/study/chap_5.py”, line 106, in <module><br>    assert 0 &lt; age &lt; 100, ‘The age must be realistic’<br>AssertionError: The age must be realistic</module></p>
+</blockquote>
+<h3 id="9-while循环"><a href="#9-while循环" class="headerlink" title="9.while循环"></a>9.while循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">1</span></div><div class="line"><span class="keyword">while</span> x &lt;= <span class="number">100</span>:</div><div class="line">   <span class="keyword">print</span> x</div><div class="line">   x += <span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">name = <span class="string">''</span></div><div class="line"><span class="keyword">while</span> <span class="keyword">not</span> name:</div><div class="line">   name = raw_input(<span class="string">'Please enter your name:'</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">'Hello, %s'</span> % name</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Please enter your name:</p>
+<p>Please enter your name:lijialin</p>
+<p>Hello, lijialin</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="keyword">not</span> name <span class="keyword">or</span> name.isspace():</div><div class="line">   name = raw_input(<span class="string">'Please enter your name:'</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">'Hello, %s'</span> % name</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Please enter your name:</p>
+<p>Please enter your name:(空格)</p>
+<p>Please enter your name:lijialin</p>
+<p>Hello, lijialin</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="keyword">not</span> name.strip(<span class="string">'li'</span>):  <span class="comment"># s.strip(rm):  删除s字符串中开头、结尾处，位于 rm删除序列的字符,当rm为空时，默认删除空白符（包括'\n', '\r',  '\t',  ' ')</span></div><div class="line">   name = raw_input(<span class="string">'Please enter your name:'</span>)</div><div class="line"><span class="keyword">print</span> <span class="string">'Hello, %s'</span> % name</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Please enter your name:li</p>
+<p>Please enter your name:lijialin</p>
+<p>Hello, lijialin</p>
+</blockquote>
+<h3 id="10-for循环"><a href="#10-for循环" class="headerlink" title="10.for循环"></a>10.for循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">words = [<span class="string">'this'</span>, <span class="string">'is'</span>, <span class="string">'an'</span>, <span class="string">'ex'</span>, <span class="string">'parrot'</span>]</div><div class="line"><span class="keyword">for</span> word <span class="keyword">in</span> words:</div><div class="line">   <span class="keyword">print</span> word</div><div class="line"></div><div class="line"><span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">101</span>):  <span class="comment"># 当需要迭代一个巨大的序列时，xrange会更高效</span></div><div class="line">   <span class="keyword">print</span> number</div><div class="line"></div><div class="line">d = &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">2</span>, <span class="string">'z'</span>: <span class="number">3</span>&#125;</div><div class="line"><span class="keyword">for</span> key <span class="keyword">in</span> d:</div><div class="line">   <span class="keyword">print</span> key, <span class="string">'corresponds to'</span>, d[key]  <span class="comment"># 字典元素的顺序通常是没有定义的</span></div><div class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> d.items():</div><div class="line">   <span class="keyword">print</span> key, <span class="string">'corresponds to'</span>, value</div></pre></td></tr></table></figure>
+<h3 id="11-迭代"><a href="#11-迭代" class="headerlink" title="11.迭代"></a>11.迭代</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#一些迭代工具</span></div><div class="line">names = [<span class="string">'anne'</span>, <span class="string">'beth'</span>, <span class="string">'george'</span>, <span class="string">'damon'</span>]</div><div class="line">ages = [<span class="number">12</span>, <span class="number">45</span>, <span class="number">32</span>, <span class="number">102</span>]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(names)):</div><div class="line">   <span class="keyword">print</span> names[i], <span class="string">'is'</span>, ages[i], <span class="string">'years old.'</span></div><div class="line"><span class="comment"># 内建的zip函数可以进行并行迭代</span></div><div class="line"><span class="keyword">print</span> zip(names, ages)</div><div class="line"><span class="keyword">for</span> name, age <span class="keyword">in</span> zip(names, ages):</div><div class="line">   <span class="keyword">print</span> name, <span class="string">'is'</span>, age, <span class="string">'years old.'</span></div><div class="line"></div><div class="line"><span class="keyword">print</span> zip(range(<span class="number">5</span>), xrange(<span class="number">100000</span>))  <span class="comment"># zip可以处理不等长的序列</span></div><div class="line"></div><div class="line"><span class="comment"># 按索引迭代enumerate</span></div><div class="line"><span class="comment"># 可以再提供索引的地方迭代索引-值对</span></div><div class="line"><span class="keyword">print</span> <span class="string">''</span>.join(reversed(<span class="string">'hello,world!'</span>))</div><div class="line"><span class="keyword">print</span> sorted(<span class="string">'Hello world!'</span>)</div><div class="line"><span class="keyword">print</span> list(reversed(<span class="string">'Hello world!'</span>))</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>anne is 12 years old.</p>
+<p>beth is 45 years old.</p>
+<p>george is 32 years old.</p>
+<p>damon is 102 years old.</p>
+<p>[(‘anne’, 12), (‘beth’, 45), (‘george’, 32), (‘damon’, 102)]</p>
+<p>anne is 12 years old.</p>
+<p>beth is 45 years old.</p>
+<p>george is 32 years old.</p>
+<p>damon is 102 years old.</p>
+<p>[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]</p>
+<p>!dlrow,olleh</p>
+<p>[‘ ‘, ‘!’, ‘H’, ‘d’, ‘e’, ‘l’, ‘l’, ‘l’, ‘o’, ‘o’, ‘r’, ‘w’]</p>
+<p>[‘!’, ‘d’, ‘l’, ‘r’, ‘o’, ‘w’, ‘ ‘, ‘o’, ‘l’, ‘l’, ‘e’, ‘H’]</p>
+</blockquote>
+<h3 id="12-跳出循环"><a href="#12-跳出循环" class="headerlink" title="12.跳出循环"></a>12.跳出循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># break</span></div><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">99</span>, <span class="number">0</span>, <span class="number">-1</span>):</div><div class="line">   root = sqrt(n)</div><div class="line">   <span class="keyword">if</span> root == int(root):</div><div class="line">       <span class="keyword">print</span> n</div><div class="line">       <span class="keyword">break</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>81</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># continue</span></div><div class="line"><span class="comment"># 会让当前的迭代结束，跳到下一轮循环的开始</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">   word = raw_input(<span class="string">'Please enter a word: '</span>)</div><div class="line">   <span class="keyword">if</span> <span class="keyword">not</span> word:</div><div class="line">       <span class="keyword">break</span></div><div class="line">   <span class="keyword">print</span> <span class="string">'The word was '</span>+word</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Please enter a word: word</p>
+<p>The word was word</p>
+<p>Please enter a word: </p>
+<p>Process finished with exit code 0</p>
+</blockquote>
+<h3 id="13-列表推导式–轻量级循环"><a href="#13-列表推导式–轻量级循环" class="headerlink" title="13.列表推导式–轻量级循环"></a>13.列表推导式–轻量级循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> [x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)]</div><div class="line"><span class="keyword">print</span> [x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> x % <span class="number">3</span> == <span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> [(x, y) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">3</span>) <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">3</span>)]</div><div class="line">girls = [<span class="string">'alice'</span>, <span class="string">'bernice'</span>, <span class="string">'clarice'</span>]</div><div class="line">boys = [<span class="string">'chris'</span>, <span class="string">'arnold'</span>, <span class="string">'bob'</span>]</div><div class="line"><span class="keyword">print</span> [boy+<span class="string">'+'</span>+girl <span class="keyword">for</span> boy <span class="keyword">in</span> boys <span class="keyword">for</span> girl <span class="keyword">in</span> girls <span class="keyword">if</span> boy[<span class="number">0</span>] == girl[<span class="number">0</span>]]</div><div class="line">letterGirls = &#123;&#125;</div><div class="line"><span class="keyword">for</span> girl <span class="keyword">in</span> girls:</div><div class="line">   letterGirls.setdefault(girl[<span class="number">0</span>], []).append(girl)</div><div class="line">   <span class="keyword">print</span> letterGirls</div><div class="line"><span class="keyword">print</span> [boy+<span class="string">'+'</span>+girl <span class="keyword">for</span> boy <span class="keyword">in</span> boys <span class="keyword">for</span> girl <span class="keyword">in</span> letterGirls[boy[<span class="number">0</span>]]]</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>[[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</p>
+<p>[0, 9, 36, 81]</p>
+<p>[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]</p>
+<p>[‘chris+clarice’, ‘arnold+alice’, ‘bob+bernice’]</p>
+<p>{‘a’: [‘alice’]}</p>
+<p>{‘a’: [‘alice’], ‘b’: [‘bernice’]}</p>
+<p>{‘a’: [‘alice’], ‘c’: [‘clarice’], ‘b’: [‘bernice’]}</p>
+<p>[‘chris+clarice’, ‘arnold+alice’, ‘bob+bernice’]</p>
+</blockquote>
+<h3 id="14-pass，del，exec和eval"><a href="#14-pass，del，exec和eval" class="headerlink" title="14.pass，del，exec和eval"></a>14.pass，del，exec和eval</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># python中空代码块是非法的，解决方法就是在语句块上加一个pass</span></div><div class="line"><span class="comment"># del不仅会移除一个对象的引用，也会移除那个名字本身</span></div><div class="line"><span class="comment"># exec和eval执行和求值字符串</span></div><div class="line"><span class="comment"># 如果程序将用户提供的一段内容中的一部分字符串作为代码执行，程序可能会失去对代码执行的控制</span></div><div class="line"></div><div class="line"><span class="keyword">exec</span> <span class="string">"print 'hello,world!'"</span></div><div class="line"></div><div class="line"><span class="comment"># 为了安全起见，可以增加一个字典，起到命名空间的作用</span></div><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line">scope = &#123;&#125;</div><div class="line"><span class="keyword">exec</span> <span class="string">'sqrt = 1'</span> <span class="keyword">in</span> scope</div><div class="line"><span class="keyword">print</span> sqrt(<span class="number">4</span>)</div><div class="line"><span class="keyword">print</span> scope[<span class="string">'sqrt'</span>]</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>hello,world!</p>
+<p>2.0</p>
+<p>1</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># eval会计算Python表达式（以字符串形式书写），并且返回结果值</span></div><div class="line"><span class="keyword">print</span> eval(raw_input(<span class="string">"Enter an arithmetic expression:"</span>))</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>Enter an arithmetic expression:10*5</p>
+<p>50</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 可以给eval语句提供两个命名空间，一个全局的（必须是字典），一个局部的（可以是任何形式的映射）。</span></div><div class="line">scope = &#123;&#125;</div><div class="line"><span class="keyword">exec</span><span class="string">'x=2'</span> <span class="keyword">in</span> scope</div><div class="line"><span class="keyword">print</span> eval(<span class="string">'x*x'</span>, scope)</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>4</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">scope = &#123;&#125;</div><div class="line">scope[<span class="string">'x'</span>] = <span class="number">2</span></div><div class="line">scope[<span class="string">'y'</span>] = <span class="number">3</span></div><div class="line"><span class="keyword">print</span> eval(<span class="string">' x * y '</span>, scope)</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<blockquote>
+<p>6</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    李佳霖
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="" title="Python学习笔记 基础（五）">Python学习笔记 基础（五）</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+    
+    
+    
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/study/" rel="tag"># study</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/07/2018-03-07-python-study-four/" rel="next" title="Python学习笔记 基础（四）">
+                <i class="fa fa-chevron-left"></i> Python学习笔记 基础（四）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/author.jpg"
+              alt="李佳霖" />
+          
+            <p class="site-author-name" itemprop="name">李佳霖</p>
+            <p class="site-description motion-element" itemprop="description">一个准程序猿</p>
+
+         
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=27514120&auto=0&height=66"></iframe> 
+        
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lijialin0707" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3015358473" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>微博</a>
+              </span>
+            
+
+          <!--以下是加入关于high一下的代码-->
+            <span class="links-of-author-item"><a title="小high一下~" style="underline: none;color:red" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> &nbsp;&nbsp;High</a></span>
+          <!--以上是加入关于high一下的代码-->
+
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python学习笔记-基础（五）"><span class="nav-number">1.</span> <span class="nav-text">Python学习笔记 基础（五）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-print语句"><span class="nav-number">1.1.</span> <span class="nav-text">1.print语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-import语句"><span class="nav-number">1.2.</span> <span class="nav-text">2.import语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-赋值语句"><span class="nav-number">1.3.</span> <span class="nav-text">3.赋值语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-序列解包"><span class="nav-number">1.4.</span> <span class="nav-text">4.序列解包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-增量赋值"><span class="nav-number">1.5.</span> <span class="nav-text">5.增量赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-条件语句"><span class="nav-number">1.6.</span> <span class="nav-text">6.条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-嵌套代码块"><span class="nav-number">1.7.</span> <span class="nav-text">7.嵌套代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-一些小细节"><span class="nav-number">1.8.</span> <span class="nav-text">8.一些小细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-while循环"><span class="nav-number">1.9.</span> <span class="nav-text">9.while循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-for循环"><span class="nav-number">1.10.</span> <span class="nav-text">10.for循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-迭代"><span class="nav-number">1.11.</span> <span class="nav-text">11.迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-跳出循环"><span class="nav-number">1.12.</span> <span class="nav-text">12.跳出循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-列表推导式–轻量级循环"><span class="nav-number">1.13.</span> <span class="nav-text">13.列表推导式–轻量级循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-pass，del，exec和eval"><span class="nav-number">1.14.</span> <span class="nav-text">14.pass，del，exec和eval</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>  
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 &mdash; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李佳霖</span>
+
+  
+
+</div>
+
+
+
+
+  <div class="powered-by"><a class="theme-link" href="https://lijialin.me">Lijialin</a> 专属博客</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="true"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" color="0,0,0" opacity='0.5' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="112.5" height="225" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: 75px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/shizuku/shizuku.model.json",0.5)</script>
+  
+
+</body>
+</html>
